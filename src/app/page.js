@@ -52,7 +52,7 @@ const Page = () => {
         <h2 className='text-blue-950 font-bold mt-4'>Resultados</h2>
       </section>
       <section className='flex justify-center items-center m-3 rounded-md'>
-        <textarea className=' border-dashed border-2 border-sky-700 w-full mt-4 ml-4 mr-4 pt-3 pr-3 pl-3 ' value={result} readOnly />
+        <textarea className=' border-dashed border-2 border-sky-700 w-full mt-4 ml-4 mr-4 pt-3 pr-3 pl-3 ' value= {`El resultado es: ${result}`} readOnly />
       </section>
 
       <section className='flex justify-center items-center'>
