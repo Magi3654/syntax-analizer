@@ -9,18 +9,20 @@ const Page = () => {
   const inputChange = (e) => {
     const input = e.target.value;
 
-    // Remove block comments 
-    if(/^[0-9+\-*/(). \n\r]+$/.test(input)){
-      setExpressions(input);
-    }else{
-      setResult('Error de sintaxis')
-    }
+    setExpressions(input);
     };
 
 
   const analizador = () => {
-      const calculatedResult = analizar(expressions);
+    const inputWithOutComments = expressions.replace(/(\/\/[^\n]*)|\/\*[\s\S]*?\*\//g, '')
+    console.log(inputWithOutComments);
+    if(/^[0-9+\-*/(). \n\r]+$/.test(inputWithOutComments)){
+      const calculatedResult = analizar(inputWithOutComments);
       setResult(calculatedResult.toString());
+    }else{
+      setResult('Error de sintaxis')
+    }
+      
     
   };
   const clearArea= ()=>{
