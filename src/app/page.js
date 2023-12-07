@@ -32,15 +32,15 @@ const Page = () => {
 
   return (
     <main className='h-screen w-screen font-sans bg-sky-100 place-content-center'>
-      <section className='text-blue-950 font-bold text-center m-4'>
+      <section className='text-blue-950 font-bold text-center '>
         <h1 className='text-3xl'>Analizador Sintáctico</h1>
         <h1 className='m-2 text-2xl'>Calculadora con ANTLR4</h1>
         <h1 className='m-3 text-2xl'>Ilse Machado</h1>
-        <p className='bg-sky-300'>
+        <p className='bg-sky-300 ml-4 mr-4'>
           Instrucciones de uso: Ingresa cualquier expresión aritmética dentro del cuadro de texto.
           Solo reconoce números. Puedes calcular múltiples expresiones.
         </p>
-        <p className='bg-sky-200'>¡Haz tu primer cálculo!</p>
+        <p className='bg-sky-200 ml-4 mr-4'>¡Haz tu primer cálculo!</p>
       </section>
       <section className='flex justify-center items-center'>
         <textarea
