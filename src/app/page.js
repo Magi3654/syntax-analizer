@@ -7,14 +7,16 @@ const Page = () => {
   const [result, setResult] = useState('');
 
   const inputChange = (e) => {
-    const input= (e.target.value);
+    const input = e.target.value;
 
-  if(/^[0-9+\-*/(). \n\r]+$/.test(input)){
-    setExpressions(input);
-  }else{
-    setResult('Error de sintaxis')
-  }
-  };
+    // Remove block comments 
+    if(/^[0-9+\-*/(). \n\r]+$/.test(input)){
+      setExpressions(input);
+    }else{
+      setResult('Error de sintaxis')
+    }
+    };
+
 
   const analizador = () => {
       const calculatedResult = analizar(expressions);
